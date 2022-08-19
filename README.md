@@ -1,4 +1,8 @@
-# TurboWarp Packager
+# ClipCC Packager
+## Copyright Notice
+This packager is based on Turbowarp packager. Maybe we will rewrite the packager someday in the future?
+
+---
 
 https://packager.turbowarp.org/
 
@@ -9,13 +13,13 @@ Converts Scratch projects into HTML files, zip archives, or executable programs 
 Install dependencies:
 
 ```
-npm ci
+yarn install
 ```
 
 Start in development mode:
 
 ```
-npm start
+yarn start
 ```
 
 Then visit http://localhost:8947. Manually refresh to see changes.
@@ -23,7 +27,7 @@ Then visit http://localhost:8947. Manually refresh to see changes.
 Packaged projects generated while in development mode should not be distributed. Instead, you should run a production build to significantly reduce file size of both the website and the packager.
 
 ```
-npm run build-prod
+yarn run build-prod
 ```
 
 Output will be located in the `dist` folder.
@@ -80,7 +84,7 @@ Set the environment variable `ENABLE_SERVICE_WORKER` to `1` to enable service wo
 To make a production standalone build:
 
 ```
-npm run build-standalone-prod
+yarn run build-standalone-prod
 ```
 
 Output will be located in `dist/standalone.html`.
@@ -92,8 +96,7 @@ See [node-api-docs/README.md](node-api-docs/README.md) for Node.js API documenta
 To build the Node.js module locally:
 
 ```
-npm run build-node-prod
-```
+yarn run build-node-prod```
 
 ## License
 
