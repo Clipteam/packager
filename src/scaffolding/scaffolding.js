@@ -307,7 +307,7 @@ class Scaffolding extends EventTarget {
   }
 
   setup () {
-    this.vm = new VM({appVersion: '3.1.4p'});
+    this.vm = new VM({appVersion: 'p3.1.4'});
     this.vm.setCompatibilityMode(true);
     this.vm.setLocale(navigator.language);
     this.vm.on('MONITORS_UPDATE', this._onmonitorsupdate.bind(this));
@@ -437,6 +437,7 @@ class Scaffolding extends EventTarget {
   }
 
   loadProject (data) {
+    console.log('projectData', data);
     return this.vm.loadProject(data)
       .then(() => {
         this.vm.setCloudProvider(this.cloudManager);
