@@ -1,4 +1,5 @@
 import VM from 'clipcc-vm';
+import {extensionManager} from 'clipcc-extension';
 import Renderer from 'scratch-render';
 import Storage from './storage';
 import AudioEngine from 'scratch-audio';
@@ -307,7 +308,7 @@ class Scaffolding extends EventTarget {
   }
 
   setup () {
-    this.vm = new VM({appVersion: 'p3.1.4'});
+    this.vm = new VM({appVersion: 'p3.1.4', extensionManager});
     this.vm.setCompatibilityMode(true);
     this.vm.setLocale(navigator.language);
     this.vm.on('MONITORS_UPDATE', this._onmonitorsupdate.bind(this));
