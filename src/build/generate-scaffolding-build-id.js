@@ -16,8 +16,7 @@ const files = [
   ...getAllFiles('./src/addons/**/*'),
   ...getAllFiles('./src/common/**/*'),
   path.join(root, 'webpack.config.js'),
-  path.join(root, 'package.json'),
-  path.join(root, 'yarn.lock')
+  path.join(root, 'package.json')
 ];
 for (const file of files) {
   const stat = fs.statSync(file);
