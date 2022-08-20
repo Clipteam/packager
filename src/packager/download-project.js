@@ -38,7 +38,10 @@ const analyzeScratch3 = (projectData) => {
   const stageComments = Object.values(stage.comments)
     .map((i) => i.text);
   // TODO: usesMusic has possible false negatives
-  const usesMusic = projectData.extensions.includes('music');
+  const usesMusic = typeof projectData.extensions === 'object' ?
+    projectData.extensions.hasOwnProperty('music') :
+    projectData.extensions.includes('music');
+    
   return {
     ...unknownAnalysis(),
     stageVariables,
