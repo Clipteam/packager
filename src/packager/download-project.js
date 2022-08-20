@@ -39,8 +39,8 @@ const analyzeScratch3 = (projectData) => {
     .map((i) => i.text);
   // TODO: usesMusic has possible false negatives
   const usesMusic = Array.isArray(projectData.extensions) ?
-    projectData.extensions.hasOwnProperty('music') :
-    projectData.extensions.includes('music');
+    projectData.extensions.includes('music') :
+    projectData.extensions.hasOwnProperty('music');
     
   return {
     ...unknownAnalysis(),
