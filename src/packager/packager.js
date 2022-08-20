@@ -952,7 +952,7 @@ cd "$(dirname "$0")"
             throw new Error('project.json is not in zip');
           }
           for (const file in zip.files) {
-            if (/^extensions\/.+\.ccx$/g.test(file)) {
+            if (/^extension\\/.\+\.ccx/g.test(file)) {
               const extData = await zip.files[file].async('arraybuffer');
               
               let instance;
