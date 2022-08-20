@@ -41,7 +41,7 @@ const analyzeScratch3 = (projectData) => {
   const usesMusic = Array.isArray(projectData.extensions) ?
     projectData.extensions.includes('music') :
     projectData.extensions.hasOwnProperty('music');
-    
+
   return {
     ...unknownAnalysis(),
     stageVariables,

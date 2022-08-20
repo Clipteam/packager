@@ -16,11 +16,11 @@ jobs:
       with:
         node-version: 14.x
     - name: Install dependencies
-      run: npm install
+      run: yarn install
     - name: Build
-      run: npm run build
+      run: yarn run build
     - name: Test
-      run: npm run test
+      run: yarn run test
     - name: Build standalone
       run: npm run build-standalone-prod
     - name: Upload standalone artifact
