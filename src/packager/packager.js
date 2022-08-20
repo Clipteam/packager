@@ -1332,7 +1332,7 @@ cd "$(dirname "$0")"
 
       vm.setTurboMode(${this.options.turbo});
       if (vm.setInterpolation) vm.setInterpolation(${this.options.interpolation});
-      if (vm.setFramerate) vm.setFramerate(${this.options.framerate});
+      if (vm.setFramerate) vm.runtime.setFramerate(${this.options.framerate});
       if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(${this.options.highQualityPen});
       if (vm.setRuntimeOptions) vm.setRuntimeOptions({
         fencing: ${this.options.fencing},

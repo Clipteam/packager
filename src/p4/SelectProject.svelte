@@ -18,7 +18,7 @@
 
   const defaultProjectId = '60917032';
 
-  const type = writablePersistentStore('SelectProject.type', 'id');
+  const type = writablePersistentStore('SelectProject.type', 'file');
   const projectId = writablePersistentStore('SelectProject.id', defaultProjectId);
   const projectUrl = writablePersistentStore('SelectProject.url', '');
 
@@ -243,15 +243,6 @@
     <p>{$_('select.selectHelp')}</p>
 
     <div class="options">
-      <div class="option">
-        <label>
-          <input type="radio" name="project-type" bind:group={$type} value="id">
-          {$_('select.id')}
-        </label>
-        {#if $type === "id"}
-          <input type="text" value={getDisplayedProjectURL()} spellcheck="false" on:keypress={submitOnEnter} on:input={handleInput} on:focus={handleFocus}>
-        {/if}
-      </div>
       <!-- TurboWarp Desktop looks for the file-input-option class for special handling, so be careful when modifying this. -->
       <div class="option file-input-option">
         <label>

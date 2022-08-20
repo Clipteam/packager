@@ -340,7 +340,7 @@
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" bind:checked={$options.interpolation}>
+        <input type="checkbox" disabled bind:checked={$options.interpolation}>
         {$_('options.interpolation')}
       </label>
       <LearnMore slug="interpolation" />
@@ -354,7 +354,7 @@
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" checked={$options.maxClones === ALMOST_INFINITY} on:change={(e) => {
+        <input type="checkbox" disabled checked={$options.maxClones === ALMOST_INFINITY} on:change={(e) => {
           $options.maxClones = e.target.checked ? ALMOST_INFINITY : 300;
         }}>
         {$_('options.infiniteClones')}
@@ -363,7 +363,7 @@
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" checked={!$options.fencing} on:change={(e) => {
+        <input type="checkbox" disabled checked={!$options.fencing} on:change={(e) => {
           $options.fencing = !e.target.checked;
         }}>
         {$_('options.removeFencing')}
@@ -372,7 +372,7 @@
     </div>
     <div class="option">
       <label>
-        <input type="checkbox" checked={!$options.miscLimits} on:change={(e) => {
+        <input type="checkbox" disabled checked={!$options.miscLimits} on:change={(e) => {
           $options.miscLimits = !e.target.checked;
         }}>
         {$_('options.removeMiscLimits')}
@@ -396,22 +396,22 @@
     <h3>{$_('options.stage')}</h3>
     <label class="option">
       {$_('options.stageSize')}
-      <input type="number" min="1" max="4096" step="1" bind:value={$options.stageWidth}>
+      <input type="number" disabled min="1" max="4096" step="1" bind:value={$options.stageWidth}>
       &times;
-      <input type="number" min="1" max="4096" step="1" bind:value={$options.stageHeight}>
+      <input type="number" disabled min="1" max="4096" step="1" bind:value={$options.stageHeight}>
       <LearnMore slug="custom-stage-size" />
     </label>
     <div class="group">
       <label class="option">
-        <input type="radio" name="resize-mode" value="preserve-ratio" bind:group={$options.resizeMode}>
+        <input type="radio" disabled name="resize-mode" value="preserve-ratio" bind:group={$options.resizeMode}>
         {$_('options.preserveRatio')}
       </label>
       <label class="option">
-        <input type="radio" name="resize-mode" value="stretch" bind:group={$options.resizeMode}>
+        <input type="radio" disabled name="resize-mode" value="stretch" bind:group={$options.resizeMode}>
         {$_('options.stretch')}
       </label>
       <label class="option">
-        <input type="radio" name="resize-mode" value="dynamic-resize" bind:group={$options.resizeMode}>
+        <input type="radio" disabled name="resize-mode" value="dynamic-resize" bind:group={$options.resizeMode}>
         {$_('options.dynamicResize')}
         <LearnMore slug="packager/dynamic-stage-resize" />
       </label>
@@ -698,14 +698,14 @@
 
       <div class="option">
         <label>
-          <input type="checkbox" bind:checked={$options.compiler.enabled}>
+          <input type="checkbox" disabled bind:checked={$options.compiler.enabled}>
           {$_('options.enableCompiler')}
         </label>
         <LearnMore slug="disable-compiler" />
       </div>
       <div class="option">
         <label>
-          <input type="checkbox" bind:checked={$options.compiler.warpTimer}>
+          <input type="checkbox" disabled bind:checked={$options.compiler.warpTimer}>
           {$_('options.warpTimer')}
         </label>
         <LearnMore slug="warp-timer" />
