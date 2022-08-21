@@ -953,6 +953,7 @@ cd "$(dirname "$0")"
           }
           for (const file in zip.files) {
             if (/^extensions\\/.\\+\\.ccx/g.test(file)) {
+                console.log(file);
               const extData = await zip.files[file].async('arraybuffer');
               
               let instance;
@@ -983,7 +984,7 @@ cd "$(dirname "$0")"
               
               // locale and settings is unnecessary for packager
               
-              extensionManager.addInstance(info.id, info, instance);
+              await extensionManager.addInstance(info.id, info, instance);
             }
           }
           return file.async('arraybuffer');
